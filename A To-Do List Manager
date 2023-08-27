@@ -1,0 +1,26 @@
+# Create an empty to-do list
+todo_list = []
+
+# Function to add a task to the to-do list
+def add_task(task):
+    todo_list.append(task)
+
+# Function to view all tasks in the to-do list
+def view_tasks():
+    for task in todo_list:
+        print(task)
+
+# Function to delete a task from the to-do list
+def delete_task(task):
+    if task in todo_list:
+        todo_list.remove(task)
+        print("Task deleted successfully.")
+    else:
+        print("Task not found in the to-do list.")
+
+# Example usage
+add_task("Buy groceries")
+add_task("Finish homework")
+view_tasks()
+delete_task("Buy groceries")
+view_tasks()
